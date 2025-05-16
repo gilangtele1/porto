@@ -36,7 +36,7 @@ export const TonConnectProvider = ({
     if (!tonConnectUIRef.current) {
       tonConnectUIRef.current = new TonConnectUI({
         manifestUrl:
-          "https://4314-125-164-19-115.ngrok-free.app/tonconnect-manifest.json",
+          "https://porto-f4doe1sq5-mgilangnurhalizcrypt-5970s-projects.vercel.app/tonconnect-manifest.json",
         buttonRootId: "ton-connect",
       });
     }

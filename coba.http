@@ -1,0 +1,5 @@
+Get https://tonapi.io/v2/lockchain/accounts/UQDYwb2h6aeCti27KZyLbS5cccpH5RM1pBB3omRkPUJRqFBy/transactions
+
+###
+
+GET https://tonapi.io/v2/blockchain/accounts/UQDYwb2h6aeCti27KZyLbS5cccpH5RM1pBB3omRkPUJRqFBy/transactions

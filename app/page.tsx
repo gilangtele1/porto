@@ -1,101 +1,145 @@
 import Image from "next/image";
+import Lanyard from "./components/Lanyard/Lanyard";
+import Navbar from "./components/Navbar/Navbar";
+import SplitTextWrapper from "./components/SplitText/SplittextWrapper";
+import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
+import FadeContent from "./components/FadeContent/FadeContent";
+import Footer from "./components/Footer/Footer";
+import SponsorsMarquee from "./components/LogoHorizontal/Logo";
+import SimpleCarousel from "./components/Testimonial/Testimoni";
+import TwoColumnLayout from "./components/message/message";
+import TouchMe from "./components/TouchMe/TouchMe";
+import ExperienceSection from "./components/Experience/ExperienceWrapper";
+import { BentoGridDemo } from "./components/Projec/projecWrapper";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className=" textmin-h-screen overflow-x-hidden relative">
+      <Navbar />{" "}
+      <div id="home" className="container  mx-auto h-screen">
+        <div className="grid grid-cols-12">
+          <div className="col-span-6 flex items-center justify-start">
+            <div className="justify-col">
+              <SplitTextWrapper />
+              <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+              >
+                <h1 className="mt-4 text-6xl font-semibold">
+                  A <span className="text-blue-600 "> developer</span> & open
+                  source enthusiast{" "}
+                </h1>
+                <h2 className="mt-6 ">
+                  I’m building experience working with various brands to design
+                  impactful,
+                  <br /> mission-focused websites that deliver real results and
+                  achieve business goals.
+                </h2>
+                <a
+                  href="#home"
+                  className="inline-block mt-8 px-6 py-3 text-white bg-blue-500 hover:bg-blue-600 rounded-xl shadow-lg transition duration-300 ease-in-out"
+                >
+                  Download Resume
+                </a>
+              </FadeContent>
+            </div>
+          </div>
+          <div className="col-span-6">
+            <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+      <div className="container mx-auto">
+        <ExperienceSection />
+      </div>
+      <div className="container mx-auto mt-20 py-5 border-t border-b">
+        <SponsorsMarquee />
+      </div>
+      <FadeContent
+        blur={true}
+        duration={3000}
+        easing="ease-out"
+        initialOpacity={0}
+      >
+        <div
+          id="project"
+          className="container tracking-widest scroll-mt-24 mx-auto mt-20 text-2xl text-orange-500"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          My Projects
+        </div>
+        <div className="container mx-auto mt-3 font-bold text-5xl text-blue-600">
+          Some things i’ve made
+        </div>
+        <div className="container mx-auto mt-3 ">
+          <p className="text-neutral-600 dark:text-neutral-400">
+            {" "}
+            A curated showcase highlighting my skills and the results I’ve
+            achieved
+          </p>
+        </div>
+        <div className="container mx-auto mt-5 py-5 ">
+          <BentoGridDemo />
+        </div>
+      </FadeContent>
+      <AnimatedContent
+        distance={150}
+        direction="horizontal"
+        reverse={true}
+        config={{ tension: 80, friction: 25 }}
+        initialOpacity={0.1}
+        animateOpacity
+        scale={1.5}
+        threshold={0.2}
+      >
+        <div className="container tracking-widest mx-auto mt-20 text-2xl text-orange-500">
+          Say Hello
+        </div>
+        <div className="container mx-auto ">
+          <h1 className="mt-2 mb-2 text-5xl text-blue-600 font-bold ">
+            Send it on chain
+          </h1>
+        </div>
+        <div className="container mx-auto ">
+          <TwoColumnLayout />
+        </div>
+      </AnimatedContent>
+      <AnimatedContent
+        distance={150}
+        direction="horizontal"
+        reverse={false}
+        config={{ tension: 80, friction: 25 }}
+        initialOpacity={0.1}
+        animateOpacity
+        scale={0.5}
+        threshold={0.2}
+      >
+        <div className="container tracking-widest mx-auto mt-20 text-2xl text-orange-500">
+          Chain Wall
+        </div>
+        <div className="container mx-auto ">
+          <SimpleCarousel />
+        </div>
+      </AnimatedContent>
+      <div
+        id="contact"
+        className="relative container bg-checkerboard mx-auto border w-full h-[400px] overflow-hidden"
+      >
+        {/* Gradasi dari abu ke putih */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-300 via-white/70 to-white pointer-events-none z-0" />
+
+        {/* Konten */}
+        <div
+          className="relative mt-10 npm i motion clsx tailwind-merge
+z-10"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <TouchMe />
+        </div>
+      </div>
+      <div className="container mx-auto">
+        <Footer />
+      </div>
     </div>
   );
 }

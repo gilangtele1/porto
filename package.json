@@ -9,16 +9,37 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-spring/web": "^9.7.5",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/rapier": "^1.5.0",
+    "@tabler/icons-react": "^3.31.0",
+    "@ton/core": "^0.60.1",
+    "@ton/ton": "^15.2.1",
+    "@tonconnect/sdk": "^3.1.0",
+    "@tonconnect/ui": "^2.1.0",
+    "@tonconnect/ui-react": "^2.1.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.11.0",
+    "gsap": "^3.13.0",
+    "meshline": "^3.3.1",
+    "motion": "^12.11.3",
+    "next": "14.2.28",
+    "ngrok": "^5.0.0-beta.2",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.28"
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.3.0",
+    "three": "^0.167.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
